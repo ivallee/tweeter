@@ -1,6 +1,6 @@
 
 
-#nav-bar {
+.nav-bar {
     background-color: #00a087;
     color: #e8fdff;
     height: 80px;
@@ -9,16 +9,17 @@
     top: 0;
     padding-left: 2em;
     padding-right: 2em;
+    z-index: 1;
 }
 
-#nav-bar .logo {
+.logo {
   float: left;
   height: 80px;
   width: 80px;
   position: relative;
 }
 
-#nav-bar .header {
+.header {
   float: left;
   font-size: 200%;
   padding-left: 10px;
