@@ -21,10 +21,17 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+
 p {
-  font-size: 40px;
+  font-size: 20px;
 }
 
+.container {
+  background: #f9f9f9;
+  margin: 0 auto;
+  padding-top: 140px;
+  width: 450px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
