@@ -21,6 +21,10 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+p {
+  font-size: 40px;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
