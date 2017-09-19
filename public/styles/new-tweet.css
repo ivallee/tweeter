@@ -21,6 +21,10 @@
   padding-top: 10px;
 }
 
+.counterOver {
+  color: red;
+}
+
 .counter {
   float: right;
 }

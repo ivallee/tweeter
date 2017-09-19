@@ -1,11 +1,16 @@
+// Counts tweet characters and updates available characters.
+
 $(document).ready(function() {
 
   $(".tweetArea").on("keyup", function(event) {
     const charLength = $(this).val().length;
-    const maxCount = parseInt($(".counter").text());
-    console.log(charLength, maxCount - charLength);
-    // console.log($(this).find(".counter"));
-
+    const maxCount = 140;
+    $(this).parent().find(".counter").text(maxCount - charLength);
+    if (charLength > maxCount) {
+      $(this).parent().find(".counter").addClass("counterOver");
+    } else {
+      $(this).parent().find(".counter").removeClass("counterOver")
+    }
 
   });
 });
