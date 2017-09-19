@@ -18,6 +18,9 @@
     <!-- Navbar CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
+    <!-- New tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -37,6 +40,16 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="newTweet">
+        <h2 class="newTweetHeader">Write a Twit!</h2>
+        <div class ="newTweetInputs">
+          <form method="POST" action="/tweets/">
+            <textarea class="tweetArea" name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </div>
+      </section>
 
       <h2>A Thing</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

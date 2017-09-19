@@ -1,0 +1,27 @@
+.newTweet {
+  background-color: #eee;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+.newTweetHeader {
+  border-bottom-color: grey;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin: 0 auto;
+}
+
+.tweetArea {
+  padding: 10px;
+  width: 100%;
+}
+
+.newTweetInputs {
+  padding-top: 10px;
+}
+
+.counter {
+  float: right;
+}
