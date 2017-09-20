@@ -2,7 +2,8 @@
   float: left;
   font-size: 200%;
   padding-left: 10px;
-  line-height: 250%; /*There has to be a better way to do this*/
+  line-height: 250%;
+  flex-grow: 1; /*There has to be a better way to do this*/
 }
 
 .logo {
@@ -22,4 +23,16 @@
     padding-left: 2em;
     padding-right: 2em;
     z-index: 1;
+    display: flex;
+}
+
+.nav-buttons {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compose-button {
+
 }
