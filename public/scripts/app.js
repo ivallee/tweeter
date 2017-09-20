@@ -49,8 +49,8 @@ $(function() {
   }
 
   function renderTweets(tweets) {
+    $('.tweets-container').empty();
     for (let i = 0; i < tweets.length; i++) {
-      createTweetElement(tweets[i]);
       $('.tweets-container').append(createTweetElement(tweets[i]));
     }
   }
@@ -79,22 +79,21 @@ $(function() {
         .addClass("tweet-error")
         .text(errText)
         .fadeIn(500)
-        .fadeOut(5000));
+        .fadeOut(2500));
     }
 
-    const chars = $(this).find("textarea").val();
-    if (chars === '' || /^\s+$/i.test(chars) || chars === null) {
+    const chars = $(this).find("textarea");
+    if (chars.val() === '' || /^\s+$/i.test(chars.val()) || chars.val() === null) {
       tweetError("You must enter some text to tw(eat)");
-    } else if (chars.length >= 140) {
+    } else if (chars.val().length >= 140) {
       tweetError("Your tw(eat) is too long");
     } else {
-    $.post("/tweets", $(this).serialize(), function(data) {
-    });
-  }
+        $.post("/tweets", $(this).serialize(), function(data) {
+          loadTweets();
+          chars.val('')
+          $(".counter").text(140);
+        });
+      }
   });
-
-
-
-
 });
 
