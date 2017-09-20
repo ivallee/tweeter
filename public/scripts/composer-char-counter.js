@@ -6,9 +6,9 @@ $(document).ready(function() {
     const maxCount = 140;
     counter.text(maxCount - charLength);
     if (charLength > maxCount) {
-      counter.addClass("counterOver");
+      counter.addClass("counter-over");
     } else {
-      counter.removeClass("counterOver");
+      counter.removeClass("counter-over");
     }
   });
 });
