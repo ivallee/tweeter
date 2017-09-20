@@ -1,6 +1,6 @@
 // Counts tweet characters and updates available characters.
 $(document).ready(function() {
-  $(".tweetArea").on("input", function(event) {
+  $(".tweet-area").on("input", function(event) {
     const counter = $(event.target).parent().find(".counter");
     const charLength = $(event.target).val().length;
     const maxCount = 140;
