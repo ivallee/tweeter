@@ -1,4 +1,16 @@
+.header {
+  float: left;
+  font-size: 200%;
+  padding-left: 10px;
+  line-height: 250%; /*There has to be a better way to do this*/
+}
 
+.logo {
+  float: left;
+  height: 80px;
+  width: 80px;
+  position: relative;
+}
 
 .nav-bar {
     background-color: #00a087;
@@ -10,18 +22,4 @@
     padding-left: 2em;
     padding-right: 2em;
     z-index: 1;
-}
-
-.logo {
-  float: left;
-  height: 80px;
-  width: 80px;
-  position: relative;
-}
-
-.header {
-  float: left;
-  font-size: 200%;
-  padding-left: 10px;
-  line-height: 250%; /*There has to be a better way to do this*/
 }
