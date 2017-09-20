@@ -75,7 +75,7 @@ $(function() {
     // Creates errors for invalid tweets
 
     function tweetError(errText) {
-      $('#submit-tweet').append($('<div></div>')
+      $("#submit-tweet").append($('<div></div>')
         .addClass("tweet-error")
         .text(errText)
         .fadeIn(500)
@@ -95,5 +95,11 @@ $(function() {
         });
       }
   });
+
+  $("#compose-button").on("click", function(event) {
+    $(".new-tweet").slideToggle();
+    $(".tweet-area").focus();
+  });
+
 });
 
