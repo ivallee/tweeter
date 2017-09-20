@@ -71,9 +71,26 @@ $(function() {
   // POSTs new tweet
   $("form").on("submit", function( event ) {
     event.preventDefault();
-    $.post("/tweets", $(this).serialize(), function(data) {
 
+    // Creates errors for invalid tweets
+
+    function tweetError(errText) {
+      $('#submit-tweet').append($('<div></div>')
+        .addClass("tweet-error")
+        .text(errText)
+        .fadeIn(500)
+        .fadeOut(5000));
+    }
+
+    const chars = $(this).find("textarea").val();
+    if (chars === '' || /^\s+$/i.test(chars) || chars === null) {
+      tweetError("You must enter some text to tw(eat)");
+    } else if (chars.length >= 140) {
+      tweetError("Your tw(eat) is too long");
+    } else {
+    $.post("/tweets", $(this).serialize(), function(data) {
     });
+  }
   });
 
 
