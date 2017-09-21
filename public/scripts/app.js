@@ -1,8 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
 $(function() {
 
@@ -28,24 +23,20 @@ $(function() {
     // Constructs tweet footer
     const footer = $("<footer>").addClass("tweet-footer");
     const timestamp = $("<small>").addClass("timestamp").text(moment(data.created_at).fromNow());
+
+    // Contructs retweet, report and like buttons
     const tweetButtons = $("<div>").addClass("tweet-buttons");
-
-    // Retweet button
     const retweetButton = createLink().append($("<span>").addClass("fa fa-retweet"));
-
-    // Report button
     const reportButton = createLink().append($("<span>").addClass("fa fa-flag-checkered"));
-
-    // Like button
     const likeButton = createLink().append($("<span>").addClass("fa fa-heart"));
-
     tweetButtons.append(retweetButton).append(reportButton).append(likeButton);
+
     footer.append(timestamp).append(tweetButtons);
 
-    // Puts it all together!
-    $tweet.append(header).append(tweetContent).append(footer)
+    // Puts it all together
+    $tweet.append(header).append(tweetContent).append(footer);
 
-   return $tweet;
+    return $tweet;
   }
 
   function renderTweets(tweets) {
@@ -56,24 +47,16 @@ $(function() {
   }
 
   function loadTweets() {
-     $.ajax({
-      url: "/tweets",
-      method: "GET",
-      dataType: "json",
-      success: function(data) {
-        renderTweets(data);
-      },
+    $.getJSON('/tweets', function(data) {
+      renderTweets(data);
     });
   }
-
-  loadTweets();
 
   // POSTs new tweet
   $("form").on("submit", function( event ) {
     event.preventDefault();
 
-    // Creates errors for invalid tweets
-
+    // Creates error messages for invalid tweets
     function tweetError(errText) {
       $("#submit-tweet").append($('<div></div>')
         .addClass("tweet-error")
@@ -88,18 +71,19 @@ $(function() {
     } else if (chars.val().length >= 140) {
       tweetError("Your tw(eat) is too long");
     } else {
-        $.post("/tweets", $(this).serialize(), function(data) {
-          loadTweets();
-          chars.val('')
-          $(".counter").text(140);
-        });
-      }
+      $.post("/tweets", $(this).serialize(), function(data) {
+        loadTweets();
+        chars.val('');
+        $(".counter").text(140);
+      });
+    }
   });
 
   $("#compose-button").on("click", function(event) {
     $(".new-tweet").slideToggle();
     $(".tweet-area").focus();
   });
-
+  // Loads existing tweets on page load
+  loadTweets();
 });
 
