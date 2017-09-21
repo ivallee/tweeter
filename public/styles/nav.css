@@ -14,7 +14,7 @@
 }
 
 .nav-bar {
-    background-color: #00a087;
+    background-color: #a81f1f;
     color: #e8fdff;
     height: 80px;
     width: 100%;
@@ -36,7 +36,7 @@
 #compose-button {
   background-color: #f9f9f9;
   border-radius: 7px;
-  color: #00a087;
+  color: #a81f1f;
   opacity: 0.9;
   height: 60px;
   width: 110px;

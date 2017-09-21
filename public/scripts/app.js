@@ -27,7 +27,7 @@ $(function() {
 
     // Constructs tweet footer
     const footer = $("<footer>").addClass("tweet-footer");
-    const timestamp = $("<small>").addClass("timestamp").text(data.created_at);
+    const timestamp = $("<small>").addClass("timestamp").text(moment(data.created_at).fromNow());
     const tweetButtons = $("<div>").addClass("tweet-buttons");
 
     // Retweet button
