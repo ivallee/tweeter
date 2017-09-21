@@ -5,18 +5,20 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 const moment = require('moment');
+const connect = require("./lib/db-mongo.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// Connects to Mongo DB
-const connect = require("./lib/db-mongo.js");
 
+// Connects to Mongo DB
 connect(function(err, db) {
   if(err) {
     console.error(err.message);
     return;
   }
+
+  // Factory functions for retreiving and posting tweets
   const DataHelpers = require("./lib/data-helpers.js")(db);
 
   // Defines routes for tweets
