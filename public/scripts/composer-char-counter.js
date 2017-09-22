@@ -4,7 +4,6 @@ $(document).ready(function() {
     const counter = $(event.target).parent().find(".counter");
     const tweetLength = $(event.target).val().length;
     const maxCount = 140;
-    console.log(counter);
     counter.text(maxCount - tweetLength);
     if (tweetLength > maxCount) {
       counter.addClass("counter-over");
