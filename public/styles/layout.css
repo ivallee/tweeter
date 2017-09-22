@@ -18,6 +18,10 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+footer {
+  font-size: 75%;
+}
+
 .container {
   background: #f9f9f9;
   margin: 0 auto;
