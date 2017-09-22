@@ -1,0 +1,100 @@
+/* Compose Tweet section */
+
+.new-tweet {
+  background-color: #eee;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 10px;
+  display: none;
+  padding: 10px;
+
+  .new-tweet-header {
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin: 0 auto;
+  }
+
+  .new-tweet-inputs {
+    padding-top: 10px;
+
+    .new-tweet-field {
+      width: 100%;
+    }
+
+    .counter {
+      float: right;
+    }
+
+    .counter-over {
+      color: red;
+    }
+
+    .tweet-error {
+      color: red;
+    }
+  }
+}
+
+/*Existing tweet section*/
+
+.tweet {
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  overflow: hidden;
+  opacity: 0.7;
+
+  .tweet-header {
+    background-color: #eee;
+    height: 60px;
+    padding: 5px;
+
+    .avatar {
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      float: left;
+    }
+
+    .tweeter-handle {
+      float: right;
+      padding-top: 10px;
+      font-size: 90%;
+    }
+
+    .tweeter-username {
+      padding-left: 10px;
+      float:left;
+      line-height: 65%;
+    }
+  }
+  .tweet-content {
+    padding: 10px;
+  }
+  .tweet-footer {
+    border-top-color: grey;
+    border-top-style: solid;
+    border-top-width: 0.5px;
+    padding: 5px 10px;
+
+    .tweet-buttons {
+      float: right;
+      visibility: hidden;
+    }
+
+    .fa {
+      padding: 0px 2px;
+    }
+  }
+}
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet:hover .tweet-buttons {
+  visibility: visible;
+}

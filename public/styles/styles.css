@@ -1,0 +1,133 @@
+/* General Layout */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+  font-family: 'Roboto Condensed', sans-serif; }
+  body a {
+    text-decoration: none;
+    color: inherit; }
+  body footer {
+    font-size: 75%; }
+  body .container {
+    background: #f9f9f9;
+    margin: 0 auto;
+    padding: 100px 10px;
+    width: 450px; }
+
+/* Navbar */
+.nav-bar {
+  background-color: #a81f1f;
+  color: #e8fdff;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  padding-left: 2em;
+  padding-right: 2em;
+  z-index: 1; }
+  .nav-bar .header {
+    flex-grow: 1;
+    float: left;
+    font-size: 200%;
+    line-height: 250%;
+    padding-left: 10px; }
+  .nav-bar .logo {
+    float: left;
+    height: 80px;
+    width: 80px;
+    position: relative; }
+  .nav-bar .nav-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    .nav-bar .nav-buttons #compose-button {
+      background-color: #f9f9f9;
+      border-radius: 7px;
+      color: #a81f1f;
+      opacity: 0.9;
+      height: 60px;
+      width: 110px; }
+    .nav-bar .nav-buttons #compose-button:hover {
+      opacity: 1; }
+    .nav-bar .nav-buttons #bullhorn {
+      padding-right: 5px; }
+
+/* tweets */
+/* Compose Tweet section */
+.new-tweet {
+  background-color: #eee;
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 10px;
+  display: none;
+  padding: 10px; }
+  .new-tweet .new-tweet-header {
+    border-bottom-color: grey;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin: 0 auto; }
+  .new-tweet .new-tweet-inputs {
+    padding-top: 10px; }
+    .new-tweet .new-tweet-inputs .new-tweet-field {
+      width: 100%; }
+    .new-tweet .new-tweet-inputs .counter {
+      float: right; }
+    .new-tweet .new-tweet-inputs .counter-over {
+      color: red; }
+    .new-tweet .new-tweet-inputs .tweet-error {
+      color: red; }
+
+/*Existing tweet section*/
+.tweet {
+  border-style: solid;
+  border-color: grey;
+  border-width: 0.5px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  overflow: hidden;
+  opacity: 0.7; }
+  .tweet .tweet-header {
+    background-color: #eee;
+    height: 60px;
+    padding: 5px; }
+    .tweet .tweet-header .avatar {
+      height: 50px;
+      width: 50px;
+      border-radius: 10px;
+      float: left; }
+    .tweet .tweet-header .tweeter-handle {
+      float: right;
+      padding-top: 10px;
+      font-size: 90%; }
+    .tweet .tweet-header .tweeter-username {
+      padding-left: 10px;
+      float: left;
+      line-height: 65%; }
+  .tweet .tweet-content {
+    padding: 10px; }
+  .tweet .tweet-footer {
+    border-top-color: grey;
+    border-top-style: solid;
+    border-top-width: 0.5px;
+    padding: 5px 10px; }
+    .tweet .tweet-footer .tweet-buttons {
+      float: right;
+      visibility: hidden; }
+    .tweet .tweet-footer .fa {
+      padding: 0px 2px; }
+
+.tweet:hover {
+  opacity: 1; }
+
+.tweet:hover .tweet-buttons {
+  visibility: visible; }
+
+/*# sourceMappingURL=styles.css.map */
