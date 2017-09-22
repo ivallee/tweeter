@@ -1,9 +1,14 @@
-
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -12,10 +17,6 @@ body {
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
 .container {
   background: #f9f9f9;

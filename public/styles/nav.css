@@ -1,9 +1,17 @@
+#compose-button:hover {
+  opacity: 1;
+}
+
+#bullhorn {
+  padding-right: 5px;
+}
+
 .header {
+  flex-grow: 1;
   float: left;
   font-size: 200%;
-  padding-left: 10px;
   line-height: 250%;
-  flex-grow: 1; /*There has to be a better way to do this*/
+  padding-left: 10px;
 }
 
 .logo {
@@ -16,20 +24,18 @@
 .nav-bar {
     background-color: #a81f1f;
     color: #e8fdff;
+    display: flex;
     height: 80px;
     width: 100%;
     position: fixed;
-    top: 0;
     padding-left: 2em;
     padding-right: 2em;
     z-index: 1;
-    display: flex;
 }
 
 .nav-buttons {
-  float: right;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 
@@ -40,12 +46,4 @@
   opacity: 0.9;
   height: 60px;
   width: 110px;
-}
-
-#compose-button:hover {
-  opacity: 1;
-}
-
-#bullhorn {
-  padding-right: 5px;
 }
