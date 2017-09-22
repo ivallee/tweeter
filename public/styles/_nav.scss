@@ -1,6 +1,6 @@
 .nav-bar {
-  background-color: #a81f1f;
-  color: #e8fdff;
+  background-color: $brand-primary;
+  color: $brand-secondary;
   display: flex;
   height: 80px;
   width: 100%;
@@ -30,9 +30,9 @@
     justify-content: center;
 
     #compose-button {
-      background-color: #f9f9f9;
+      background-color: $brand-secondary;
       border-radius: 7px;
-      color: #a81f1f;
+      color: $brand-primary;
       opacity: 0.9;
       height: 60px;
       width: 110px;
