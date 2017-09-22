@@ -2,6 +2,15 @@
 
 Tw(eat)er is a simple, single-page Twitter clone. This is a student project using AJAX, HTML, CSS, JS/jquery, and MongoDB.
 
+## Screenshots
+
+!["Screenshot of tw(eat)s"](https://github.com/ivallee/tweeter/blob/master/docs/img1.png?raw=true)
+
+!["Screenshot of composing a tw(eat)"](https://github.com/ivallee/tweeter/blob/master/docs/img2.png?raw=true)
+
+!["Screenshot of error message"](https://github.com/ivallee/tweeter/blob/master/docs/img3.png?raw=true)
+
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
