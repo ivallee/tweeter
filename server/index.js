@@ -5,10 +5,18 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 const moment = require('moment');
+const sassMiddleware = require('node-sass-middleware');
 const connect = require("./lib/db-mongo.js");
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(sassMiddleware({
+  src: path.resolve(__dirname, "../public/"),
+  debug: true,
+  force: true
+}));
 app.use(express.static("public"));
+console.log(__dirname);
 
 
 // Connects to Mongo DB

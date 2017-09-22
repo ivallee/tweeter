@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tw(eat)er is a simple, single-page Twitter clone. This is a student project using AJAX, HTML, CSS, JS/jquery, and MongoDB.
+Tw(eat)er is a simple, single-page Twitter clone. This is a student project using AJAX, HTML, SASS, JS/jquery, and MongoDB.
 
 ## Screenshots
 
@@ -26,7 +26,12 @@ Tw(eat)er is a simple, single-page Twitter clone. This is a student project usin
 - md5
 - Moment.js
 - mongodb
+- node-sass-middleware
 
 ### Dev dependencies
 
 - Nodemon
+
+### Things you should know
+
+- Edit styles in their partial (eg. nav.scss) SCSS files, node sass middleware will take care of the rest!
