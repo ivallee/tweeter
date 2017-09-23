@@ -27,4 +27,10 @@ body {
     padding: 100px 10px;
     width: 450px;
   }
+
+  @media (max-width: 500px) {
+    .container {
+      width: 100%;
+    }
+  }
 }

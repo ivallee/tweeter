@@ -20,6 +20,9 @@ body {
     margin: 0 auto;
     padding: 100px 10px;
     width: 450px; }
+  @media (max-width: 500px) {
+    body .container {
+      width: 100%; } }
 
 /* Navbar */
 .nav-bar {
@@ -34,15 +37,12 @@ body {
   z-index: 1; }
   .nav-bar .header {
     flex-grow: 1;
-    float: left;
     font-size: 200%;
     line-height: 250%;
     padding-left: 10px; }
   .nav-bar .logo {
-    float: left;
     height: 80px;
-    width: 80px;
-    position: relative; }
+    width: 80px; }
   .nav-bar .nav-buttons {
     align-items: center;
     display: flex;
@@ -54,6 +54,9 @@ body {
       opacity: 0.9;
       height: 60px;
       width: 110px; }
+    @media (max-width: 500px) {
+      .nav-bar .nav-buttons #compose-button {
+        size: 50%; } }
     .nav-bar .nav-buttons #compose-button:hover {
       opacity: 1; }
     .nav-bar .nav-buttons #bullhorn {
